@@ -24,13 +24,13 @@ public class herokuGetBooking {
 
     }
 
-    @When("user send a get request to {string}")
-    public void user_send_a_get_request_to(String endpoint) {
+    @When("user send a get request to {string} {int}")
+    public void user_send_a_get_request_to(String endpoint,Integer id) {
 
         url = ConfigurationReader.get("herokuURL");
         response = given().header(headerKey,headerValue)
                 .when()
-                .get(url + endpoint);
+                .get(url + endpoint + id);
 
     }
 
