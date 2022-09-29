@@ -9,7 +9,7 @@ import utilities.ConfigurationReader;
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.*;
 
-public class herokuGetBooking {
+public class HerokuGetBooking {
 
     Response response;
     String url;
